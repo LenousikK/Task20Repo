@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UATSuite">
+    <test name="UatTest">
+        <groups>
+            <dependencies>
+                <group name="uat" depends-on="regression" />
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="TestForCartClass"/>
+            <class name="TestForJsonParserClassReadFrom"/>
+        </classes>
+    </test>
+</suite>

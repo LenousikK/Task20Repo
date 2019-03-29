@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.TaskForInterviewWithEBorisik.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eborisik.tests.Task20.Solution.test.iml" />
     </modules>
   </component>
 </project>
