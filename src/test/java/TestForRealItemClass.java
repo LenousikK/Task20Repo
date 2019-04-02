@@ -8,7 +8,7 @@ public class TestForRealItemClass {
     Cart lenaCart = null;
     RealItem dog = null;
 
-    @BeforeTest
+    @BeforeTest (alwaysRun = true)
     public void createNewCartAndItems() {
         lenaCart = new Cart("lena-cart");
         dog = new RealItem();

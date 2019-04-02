@@ -9,7 +9,7 @@ public class TestForVirtualItemClass {
     Cart lenaCart = null;
     VirtualItem game = null;
 
-    @BeforeTest
+    @BeforeTest (alwaysRun = true)
     public void createNewCartAndItems() {
         lenaCart = new Cart("lena-cart");
         game = new VirtualItem();

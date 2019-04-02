@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -9,13 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertTrue;
-
 public class TestForJsonParserClassWriteTo {
     JsonParser parser = null;
     Cart lenaCart = null;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void createJsonParser() {
         parser = new JsonParser();
         lenaCart = new Cart("lena-cart");
@@ -28,18 +27,14 @@ public class TestForJsonParserClassWriteTo {
         File[] arrayOfFilesInResourcesFolder = folder.listFiles();
         ArrayList<File> arrayListOfFilesInResourcesFolder = new ArrayList<File>(Arrays.asList(arrayOfFilesInResourcesFolder));
         boolean isFileEqualToCartName = false;
-        for (int i = 0; i < arrayListOfFilesInResourcesFolder.size(); i++) {
-            if (arrayListOfFilesInResourcesFolder.get(i).isFile()) {
-                if (arrayListOfFilesInResourcesFolder.get(i).getName().equals("lena-cart.json")) {
-                    isFileEqualToCartName = true;
-                    break;
-                }
-            }
+        if (arrayListOfFilesInResourcesFolder != null) {
+            isFileEqualToCartName = arrayListOfFilesInResourcesFolder.stream()
+                    .anyMatch(file -> file.getName().equals("lena-cart.json"));
         }
-        assertTrue(isFileEqualToCartName);
+        Assert.assertTrue(isFileEqualToCartName, "\"File name is equal to Cart name\"");
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void removeAllFilesCreatedInTests() {
         File folder = new File("src/main/resources/");
         File[] arrayListOfFiles = folder.listFiles();

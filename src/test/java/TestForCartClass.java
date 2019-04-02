@@ -10,7 +10,7 @@ public class TestForCartClass {
     RealItem dress = null;
     VirtualItem game = null;
 
-    @BeforeTest
+    @BeforeTest (alwaysRun = true)
     public void createNewCartAndItems() {
         lenaCart = new Cart("lena-cart");
         dress = new RealItem();

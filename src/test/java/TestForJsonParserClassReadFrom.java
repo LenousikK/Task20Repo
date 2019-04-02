@@ -10,7 +10,7 @@ import parser.NoSuchFileException;
 public class TestForJsonParserClassReadFrom {
     JsonParser parser = null;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void createJsonParser() {
         parser = new JsonParser();
     }
@@ -23,12 +23,6 @@ public class TestForJsonParserClassReadFrom {
     @Test(dataProvider = "data-provider", groups = {"functional", "regression"}, expectedExceptions = parser.NoSuchFileException.class)
     public void scenarioReadFromInvalidData(String resourcesFolderPath) {
         File fileToRead = new File("src/main/resources/" + resourcesFolderPath);
-        try {
-            parser.readFromFile(fileToRead);
-        } catch (NoSuchFileException e) {
-            System.out.println(e.getMessage());
-            Assert.assertEquals(String.format("File src\\main\\resources\\%s.json not found!", resourcesFolderPath), e.getMessage());
-            throw new NoSuchFileException();
-        }
+        parser.readFromFile(fileToRead);
     }
 }
